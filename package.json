@@ -38,7 +38,7 @@
     "release": "np",
     "deploy-docs": "cd docs && yarn install && yarn deploy",
     "postpublish": "yarn deploy-docs",
-    "build-rollup": "NODE_ENV=production rollup --config"
+    "build-rollup": "NODE_ENV=production rollup --config -c ./tools/rollup.config.js"
   },
   "engines": {
     "node": ">=10"
