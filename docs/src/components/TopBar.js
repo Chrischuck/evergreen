@@ -24,7 +24,24 @@ export default class TopBar extends PureComponent {
     const { children, ...props } = this.props
     return (
       <div>
-        <ConsentManager />
+        <div
+          style={{
+            height: 50,
+            backgroundColor: '#234361',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            color: 'white'
+          }}
+        >
+          We stand in solidarity with the Black community.{' '}
+          <a
+            href="https://support.eji.org/give/153413/#!/donation/checkout"
+            style={{ color: '#85e89d', marginLeft: 5 }}
+          >
+            Support the Equal Justice Initiative.
+          </a>
+        </div>
         <div className="TopBar" {...props}>
           <Link to="/" className="focus-ring-link">
             <LogoWordmark width={115} />
@@ -83,6 +100,7 @@ export default class TopBar extends PureComponent {
             </a>
           </div>
         </div>
+        <ConsentManager />
       </div>
     )
   }
